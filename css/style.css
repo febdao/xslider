@@ -1,0 +1,85 @@
+/* line 3, style.scss */
+.fgalery {
+  position: relative;
+  padding-right: 100px;
+  max-height: 100vh;
+}
+@media all and (max-width: 1024px) {
+  /* line 3, style.scss */
+  .fgalery {
+    padding-bottom: 50px;
+    padding-right: 0;
+  }
+}
+/* line 13, style.scss */
+.fgalery img {
+  width: 100%;
+  height: auto;
+}
+/* line 18, style.scss */
+.fgalery .slick-slide {
+  position: relative;
+  z-index: 1;
+}
+/* line 25, style.scss */
+.fgalery .slick-current:before {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  top: 5px;
+  border: 1px solid blue;
+  z-index: 3;
+  content: "";
+  pointer-events: none;
+}
+/* line 37, style.scss */
+.fgalery .slick-arrow {
+  z-index: 9999;
+}
+/* line 41, style.scss */
+.fgalery .slick-prev {
+  left: 0;
+}
+/* line 45, style.scss */
+.fgalery .slick-next {
+  right: 0;
+}
+/* line 50, style.scss */
+.fgalery__for .slick-arrow {
+  background: red;
+}
+/* line 54, style.scss */
+.fgalery__for img {
+  height: 100vh;
+  width: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media all and (max-width: 1024px) {
+  /* line 54, style.scss */
+  .fgalery__for img {
+    height: auto;
+  }
+}
+/* line 66, style.scss */
+.fgalery__nav {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+@media all and (max-width: 1024px) {
+  /* line 66, style.scss */
+  .fgalery__nav {
+    left: 0;
+    width: auto;
+    top: auto;
+  }
+}
+/* line 78, style.scss */
+.fgalery__nav .slick-arrow {
+  background: blue;
+}
