@@ -1,27 +1,56 @@
-/* line 3, style.scss */
+/*
+This is the visible area of you carousel.
+Set a width here to define how much items are visible.
+The width can be either fixed in px or flexible in %.
+Position must be relative!
+*/
+/* line 8, style.scss */
+.fgalery__for,
+.fgalery__nav {
+  position: relative;
+  overflow: hidden;
+}
+/* line 13, style.scss */
+.fgalery__for > *,
+.fgalery__nav > * {
+  width: 20000em;
+  position: relative;
+  /* Optional, required in this case since it's a <ul> element */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 24, style.scss */
+.fgalery__item {
+  /* Required only for block elements like <li>'s */
+  float: left;
+}
+
+/* line 29, style.scss */
 .fgalery {
   position: relative;
   padding-right: 100px;
   max-height: 100vh;
 }
 @media all and (max-width: 1024px) {
-  /* line 3, style.scss */
+  /* line 29, style.scss */
   .fgalery {
     padding-bottom: 50px;
     padding-right: 0;
   }
 }
-/* line 13, style.scss */
+/* line 39, style.scss */
 .fgalery img {
   width: 100%;
   height: auto;
 }
-/* line 18, style.scss */
+/* line 44, style.scss */
 .fgalery .slick-slide {
   position: relative;
   z-index: 1;
 }
-/* line 25, style.scss */
+/* line 49, style.scss */
 .fgalery .slick-current:before {
   position: absolute;
   left: 5px;
@@ -33,23 +62,23 @@
   content: "";
   pointer-events: none;
 }
-/* line 37, style.scss */
+/* line 61, style.scss */
 .fgalery .slick-arrow {
   z-index: 9999;
 }
-/* line 41, style.scss */
+/* line 65, style.scss */
 .fgalery .slick-prev {
   left: 0;
 }
-/* line 45, style.scss */
+/* line 69, style.scss */
 .fgalery .slick-next {
   right: 0;
 }
-/* line 50, style.scss */
+/* line 74, style.scss */
 .fgalery__for .slick-arrow {
   background: red;
 }
-/* line 54, style.scss */
+/* line 78, style.scss */
 .fgalery__for img {
   height: 100vh;
   width: auto;
@@ -58,12 +87,12 @@
   transform: translateX(-50%);
 }
 @media all and (max-width: 1024px) {
-  /* line 54, style.scss */
+  /* line 78, style.scss */
   .fgalery__for img {
     height: auto;
   }
 }
-/* line 66, style.scss */
+/* line 90, style.scss */
 .fgalery__nav {
   width: 100px;
   position: absolute;
@@ -72,14 +101,14 @@
   bottom: 0;
 }
 @media all and (max-width: 1024px) {
-  /* line 66, style.scss */
+  /* line 90, style.scss */
   .fgalery__nav {
     left: 0;
     width: auto;
     top: auto;
   }
 }
-/* line 78, style.scss */
+/* line 102, style.scss */
 .fgalery__nav .slick-arrow {
   background: blue;
 }
