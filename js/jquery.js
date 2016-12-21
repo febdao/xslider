@@ -20,8 +20,8 @@ $( document ).ready(function() {
       {
         breakpoint: 1400,
         settings: {
-          slidesToShow: 13,
-          slidesToScroll: 13
+          slidesToShow: 11,
+          slidesToScroll: 11
         }
       },
       {
@@ -51,4 +51,18 @@ $( document ).ready(function() {
       $('.fgalery__for').slick("slickPrev");
     }
   });
+
+  $('.js-open-content').click(function(){
+    $(this).toggleClass('active');
+
+  });
+
+  $(".js-scrollbar").mCustomScrollbar();
+
+  $('.fgalery__button a').click(function(){
+    $('.fgalery__infor').toggleClass('active');
+  });
+  setTimeout(function(){
+    $('.fgalery__infor').addClass('active');
+  }, 3000);
 });
