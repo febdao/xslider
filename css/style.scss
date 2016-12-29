@@ -3,6 +3,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background-color: #222222;
 }
 
 .fgalery {
@@ -140,6 +141,9 @@ body {
     margin-bottom: 20px;
     max-height: 160px;
     overflow: auto;
+    @media all and (max-width: $break-small) {
+      max-height: inherit;
+    }
   }
 
   &__label {
@@ -176,6 +180,9 @@ body {
 
     &__inner {
       height: 100px;
+      @media all and (max-width: $break-small) {
+        height: auto;
+      }
     }
   }
 

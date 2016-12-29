@@ -3,33 +3,34 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background-color: #222222;
 }
 
-/* line 8, style.scss */
+/* line 9, style.scss */
 .fgalery {
   position: relative;
   padding-right: 100px;
   max-height: 100vh;
 }
 @media all and (max-width: 1000px) {
-  /* line 8, style.scss */
+  /* line 9, style.scss */
   .fgalery {
     padding-bottom: 50px;
     padding-right: 0;
   }
 }
-/* line 18, style.scss */
+/* line 19, style.scss */
 .fgalery img {
   width: 100%;
   height: auto;
 }
-/* line 23, style.scss */
+/* line 24, style.scss */
 .fgalery .slick-slide {
   position: relative;
   z-index: 1;
   outline: none;
 }
-/* line 31, style.scss */
+/* line 32, style.scss */
 .fgalery__nav .slick-current:before {
   position: absolute;
   left: 0px;
@@ -42,23 +43,23 @@ body {
   pointer-events: none;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 44, style.scss */
+/* line 45, style.scss */
 .fgalery .slick-arrow {
   z-index: 9999;
 }
-/* line 48, style.scss */
+/* line 49, style.scss */
 .fgalery .slick-prev {
   left: 0;
 }
-/* line 52, style.scss */
+/* line 53, style.scss */
 .fgalery .slick-next {
   right: 0;
 }
-/* line 57, style.scss */
+/* line 58, style.scss */
 .fgalery__for .slick-arrow {
   background: red;
 }
-/* line 61, style.scss */
+/* line 62, style.scss */
 .fgalery__for img {
   height: 100vh;
   width: auto;
@@ -67,18 +68,18 @@ body {
   transform: translateX(-50%);
 }
 @media all and (max-width: 1000px) {
-  /* line 61, style.scss */
+  /* line 62, style.scss */
   .fgalery__for img {
     height: auto;
   }
 }
-/* line 73, style.scss */
+/* line 74, style.scss */
 .fgalery__nav {
   padding-right: 50px;
   padding-left: 50px;
 }
 @media all and (min-width: 1000px) {
-  /* line 73, style.scss */
+  /* line 74, style.scss */
   .fgalery__nav {
     width: 100px;
     position: absolute;
@@ -89,11 +90,11 @@ body {
     padding-left: 0;
   }
 }
-/* line 87, style.scss */
+/* line 88, style.scss */
 .fgalery__nav .slick-arrow {
   background: blue;
 }
-/* line 92, style.scss */
+/* line 93, style.scss */
 .fgalery__infor {
   padding: 20px 35px;
   font-family: 'Open Sans', Helvetica, Arial, Lucida, sans-serif;
@@ -102,7 +103,7 @@ body {
   font-weight: 300;
 }
 @media all and (min-width: 1000px) {
-  /* line 92, style.scss */
+  /* line 93, style.scss */
   .fgalery__infor {
     width: 400px;
     height: 450px;
@@ -115,48 +116,54 @@ body {
     left: -375px;
     transition: all .5s;
   }
-  /* line 111, style.scss */
+  /* line 112, style.scss */
   .fgalery__infor.active {
     left: 0;
   }
-  /* line 114, style.scss */
+  /* line 115, style.scss */
   .fgalery__infor.active .fgalery__show {
     display: none;
   }
-  /* line 117, style.scss */
+  /* line 118, style.scss */
   .fgalery__infor.active .fgalery__hide {
     display: block;
   }
 }
-/* line 123, style.scss */
+/* line 124, style.scss */
 .fgalery__infor a {
   color: #FFF;
   text-decoration: none;
   font-weight: bold;
 }
-/* line 130, style.scss */
+/* line 131, style.scss */
 .fgalery__title {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 135, style.scss */
+/* line 136, style.scss */
 .fgalery__localtion {
   margin-top: 0;
 }
-/* line 139, style.scss */
+/* line 140, style.scss */
 .fgalery__desc {
   margin-bottom: 20px;
   max-height: 160px;
   overflow: auto;
 }
-/* line 145, style.scss */
+@media all and (max-width: 1000px) {
+  /* line 140, style.scss */
+  .fgalery__desc {
+    max-height: inherit;
+  }
+}
+/* line 149, style.scss */
 .fgalery__label {
   text-transform: uppercase;
   position: relative;
   cursor: pointer;
   margin-bottom: 10px;
 }
-/* line 151, style.scss */
+/* line 155, style.scss */
 .fgalery__label:after {
   content: "+";
   transition: transform .3s;
@@ -164,67 +171,73 @@ body {
   transform: rotate(0);
   padding: 0 20px;
 }
-/* line 160, style.scss */
+/* line 164, style.scss */
 .fgalery__label.active:after {
   content: "-";
   transform: rotate(180deg);
 }
-/* line 167, style.scss */
+/* line 171, style.scss */
 .fgalery__content {
   max-height: 1px;
   overflow: hidden;
   transition: max-height .5s;
 }
-/* line 172, style.scss */
+/* line 176, style.scss */
 .active + .fgalery__content {
   max-height: 10000px;
   overflow: auto;
 }
-/* line 177, style.scss */
+/* line 181, style.scss */
 .fgalery__content__inner {
   height: 100px;
 }
-/* line 183, style.scss */
+@media all and (max-width: 1000px) {
+  /* line 181, style.scss */
+  .fgalery__content__inner {
+    height: auto;
+  }
+}
+/* line 190, style.scss */
 .fgalery__text:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 189, style.scss */
+/* line 196, style.scss */
 .fgalery__text--left {
   width: 30%;
   float: left;
 }
-/* line 194, style.scss */
+/* line 201, style.scss */
 .fgalery__text--right {
   width: 70%;
   float: right;
 }
-/* line 200, style.scss */
+/* line 207, style.scss */
 .fgalery__button {
   position: absolute;
   right: 5px;
 }
-/* line 203, style.scss */
+/* line 210, style.scss */
 .fgalery__button > a {
   font-size: 36px;
 }
-/* line 208, style.scss */
+/* line 215, style.scss */
 .fgalery__show {
   display: block;
 }
-/* line 212, style.scss */
+/* line 219, style.scss */
 .fgalery__hide {
   display: none;
 }
-/* line 216, style.scss */
+/* line 223, style.scss */
 .fgalery__back, .fgalery__next {
   text-transform: uppercase;
   position: absolute;
   left: 25px;
   bottom: 10px;
 }
-/* line 224, style.scss */
+/* line 231, style.scss */
 .fgalery__next {
   left: auto;
   right: 25px;

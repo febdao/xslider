@@ -27,8 +27,8 @@ $( document ).ready(function() {
       {
         breakpoint: 1023,
         settings: {
-          slidesToShow: 10,
-          slidesToScroll: 10,
+          slidesToShow: 7,
+          slidesToScroll: 7,
           vertical: false,
           verticalSwiping: false,
         }
@@ -57,7 +57,9 @@ $( document ).ready(function() {
 
   });
 
-  $(".js-scrollbar").mCustomScrollbar();
+  $(".js-scrollbar").mCustomScrollbar({
+    advanced:{ updateOnContentResize: true }
+  });
 
   $('.fgalery__button a').click(function(){
     $('.fgalery__infor').toggleClass('active');
