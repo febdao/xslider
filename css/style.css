@@ -1,0 +1,244 @@
+/* line 2, style.scss */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #222222;
+}
+
+/* line 9, style.scss */
+.fgalery {
+  position: relative;
+  padding-right: 100px;
+  max-height: 100vh;
+}
+@media all and (max-width: 1000px) {
+  /* line 9, style.scss */
+  .fgalery {
+    padding-bottom: 50px;
+    padding-right: 0;
+  }
+}
+/* line 19, style.scss */
+.fgalery img {
+  width: 100%;
+  height: auto;
+}
+/* line 24, style.scss */
+.fgalery .slick-slide {
+  position: relative;
+  z-index: 1;
+  outline: none;
+}
+/* line 32, style.scss */
+.fgalery__nav .slick-current:before {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  z-index: 3;
+  content: "";
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* line 45, style.scss */
+.fgalery .slick-arrow {
+  z-index: 9999;
+}
+/* line 49, style.scss */
+.fgalery .slick-prev {
+  left: 0;
+}
+/* line 53, style.scss */
+.fgalery .slick-next {
+  right: 0;
+}
+/* line 58, style.scss */
+.fgalery__for .slick-arrow {
+  background: red;
+}
+/* line 62, style.scss */
+.fgalery__for img {
+  height: 100vh;
+  width: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media all and (max-width: 1000px) {
+  /* line 62, style.scss */
+  .fgalery__for img {
+    height: auto;
+  }
+}
+/* line 74, style.scss */
+.fgalery__nav {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+@media all and (min-width: 1000px) {
+  /* line 74, style.scss */
+  .fgalery__nav {
+    width: 100px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 50px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+/* line 88, style.scss */
+.fgalery__nav .slick-arrow {
+  background: blue;
+}
+/* line 93, style.scss */
+.fgalery__infor {
+  padding: 20px 35px;
+  font-family: 'Open Sans', Helvetica, Arial, Lucida, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 300;
+}
+@media all and (min-width: 1000px) {
+  /* line 93, style.scss */
+  .fgalery__infor {
+    width: 400px;
+    height: 450px;
+    position: fixed;
+    bottom: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #FFF;
+    z-index: 9;
+    box-sizing: border-box;
+    left: -375px;
+    transition: all .5s;
+  }
+  /* line 112, style.scss */
+  .fgalery__infor.active {
+    left: 0;
+  }
+  /* line 115, style.scss */
+  .fgalery__infor.active .fgalery__show {
+    display: none;
+  }
+  /* line 118, style.scss */
+  .fgalery__infor.active .fgalery__hide {
+    display: block;
+  }
+}
+/* line 124, style.scss */
+.fgalery__infor a {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* line 131, style.scss */
+.fgalery__title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 136, style.scss */
+.fgalery__localtion {
+  margin-top: 0;
+}
+/* line 140, style.scss */
+.fgalery__desc {
+  margin-bottom: 20px;
+  max-height: 160px;
+  overflow: auto;
+}
+@media all and (max-width: 1000px) {
+  /* line 140, style.scss */
+  .fgalery__desc {
+    max-height: inherit;
+  }
+}
+/* line 149, style.scss */
+.fgalery__label {
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+/* line 155, style.scss */
+.fgalery__label:after {
+  content: "+";
+  transition: transform .3s;
+  display: inline-block;
+  transform: rotate(0);
+  padding: 0 20px;
+}
+/* line 164, style.scss */
+.fgalery__label.active:after {
+  content: "-";
+  transform: rotate(180deg);
+}
+/* line 171, style.scss */
+.fgalery__content {
+  max-height: 1px;
+  overflow: hidden;
+  transition: max-height .5s;
+}
+/* line 176, style.scss */
+.active + .fgalery__content {
+  max-height: 10000px;
+  overflow: auto;
+}
+/* line 181, style.scss */
+.fgalery__content__inner {
+  height: 100px;
+}
+@media all and (max-width: 1000px) {
+  /* line 181, style.scss */
+  .fgalery__content__inner {
+    height: auto;
+  }
+}
+/* line 190, style.scss */
+.fgalery__text:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 196, style.scss */
+.fgalery__text--left {
+  width: 30%;
+  float: left;
+}
+/* line 201, style.scss */
+.fgalery__text--right {
+  width: 70%;
+  float: right;
+}
+/* line 207, style.scss */
+.fgalery__button {
+  position: absolute;
+  right: 5px;
+}
+/* line 210, style.scss */
+.fgalery__button > a {
+  font-size: 36px;
+}
+/* line 215, style.scss */
+.fgalery__show {
+  display: block;
+}
+/* line 219, style.scss */
+.fgalery__hide {
+  display: none;
+}
+/* line 223, style.scss */
+.fgalery__back, .fgalery__next {
+  text-transform: uppercase;
+  position: absolute;
+  left: 25px;
+  bottom: 10px;
+}
+/* line 231, style.scss */
+.fgalery__next {
+  left: auto;
+  right: 25px;
+}
